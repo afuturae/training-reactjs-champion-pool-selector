@@ -12,3 +12,17 @@ export const SelectedChampions = styled.div`
     justify-content: center;
     margin-top: 25px;
 `;
+
+export const Champions = styled.div`
+    width: 100vw;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px;
+    margin-top: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+`;

@@ -22,7 +22,9 @@ const ChampionSelected: React.FC<ChampionSelectedProps> = ({ name }) => {
         :
         <ContainerWithChampion>
             <ChampionArea>
-                <ChampionImage src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${name}_0.jpg`} alt="asdasd" />
+                <ChampionImage
+                    src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${name}_0.jpg`}
+                    alt={name} />
                 <ChampionTitle>{name}</ChampionTitle>
             </ChampionArea>
         </ContainerWithChampion>
