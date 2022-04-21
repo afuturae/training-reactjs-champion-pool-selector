@@ -33,6 +33,17 @@ const Home: React.FC = () => {
         if(pool[index] !== undefined){
             const champion = pool[index];
             let newPool = pool;
+            let newChampions = [...champions, champion];
+            newChampions.sort((c1, c2) => {
+                if ( c1.name < c2.name ){
+                    return -1;
+                  }
+                  if ( c1.name > c2.name ){
+                    return 1;
+                  }
+                  return 0;
+            });
+            setChampions([...newChampions]);
             newPool.splice(index, 1);
             setPool([...newPool]);
         }

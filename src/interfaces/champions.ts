@@ -14,4 +14,8 @@ interface ChampionType {
     image: string;
 }
 
-export type { ChampionType, ChampionTypeJson };
+interface ChampionTypeWhithIndex extends ChampionType {
+    index: number;
+}
+
+export type { ChampionType, ChampionTypeJson, ChampionTypeWhithIndex };
