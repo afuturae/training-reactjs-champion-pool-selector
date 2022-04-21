@@ -5,3 +5,10 @@ export const Container = styled.div`
     height: 100vh;
     background-color: rgba(35, 35, 35, 0.75);
 `;
+
+export const SelectedChampions = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+`;
