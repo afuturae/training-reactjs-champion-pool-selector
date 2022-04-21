@@ -1,4 +1,5 @@
 import React from 'react';
+import { ChampionType } from '../../interfaces/champions';
 
 import {
     ContainerNoChampion,
@@ -10,22 +11,23 @@ import {
 } from './styles';
 
 interface ChampionSelectedProps {
-    name?: string;
+    champion?: ChampionType;
+    onClick(): void;
 }
 
-const ChampionSelected: React.FC<ChampionSelectedProps> = ({ name }) => {
+const ChampionSelected: React.FC<ChampionSelectedProps> = ({ champion, onClick }) => {
     return(
-        name === undefined ?
+        champion === undefined ?
         <ContainerNoChampion>
             <NoChampion>NO CHAMPION</NoChampion>
         </ContainerNoChampion>
         :
-        <ContainerWithChampion>
+        <ContainerWithChampion onClick={onClick} >
             <ChampionArea>
                 <ChampionImage
-                    src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${name}_0.jpg`}
-                    alt={name} />
-                <ChampionTitle>{name}</ChampionTitle>
+                    src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.image.replace('.png', '')}_0.jpg`}
+                    alt={champion.image} />
+                <ChampionTitle>{champion.name}</ChampionTitle>
             </ChampionArea>
         </ContainerWithChampion>
     );

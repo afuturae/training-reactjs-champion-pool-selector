@@ -1,4 +1,3 @@
-import { title } from 'process';
 import React from 'react';
 
 import {
@@ -10,12 +9,19 @@ import {
 
 interface ChampionProps {
     name: string;
+    image: string;
     description: string;
+    onClick(): void;
 }
 
-const Champion: React.FC<ChampionProps> = ({ name, description }) => {
+const Champion: React.FC<ChampionProps> = ({
+    name,
+    description,
+    image,
+    onClick
+}) => {
     return(
-        <Container name={name} >
+        <Container name={image} onClick={onClick} >
             <InfoArea>
                 <Title>{name}</Title>
                 <Description>{description}</Description>

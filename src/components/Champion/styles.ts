@@ -7,7 +7,7 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
     width: 120px;
     height: 120px;
-    background-image: url(${ ({ name }) => `http://ddragon.leagueoflegends.com/cdn/12.7.1/img/champion/${name}.png`});
+    background-image: url(${ ({ name }) => `http://ddragon.leagueoflegends.com/cdn/12.7.1/img/champion/${name}`});
     margin: 5px;
 
     transition: 0.1s;
@@ -47,4 +47,5 @@ export const Title = styled.p`
 `;
 export const Description = styled.p`
     font-size: 0.8rem;
+    text-align: center;
 `;
