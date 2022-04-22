@@ -10,3 +10,9 @@
 
 1. Instale as dependências com `yarn` ou `npm i`
 2. Execute o script com `yarn start` ou `npm start`
+
+---
+
+### Layout do Figma:
+
+[Clique Aqui](https://www.figma.com/file/ykQ9GN7CpqNKjJ1uWUdbLL/lol-champions?node-id=0%3A1)
